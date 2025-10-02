@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: #004d99;
+  background: linear-gradient(to bottom, rgb(0, 0, 139), rgb(0, 0, 139), rgba(0, 6, 67));
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -21,10 +21,11 @@ header {
 }
 
 .abas button {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8em;
   padding: 8px 12px;
   border: none;
-  background-color: #004d99;
+  background-color: rgb(0, 0, 139);
   color: white;
   cursor: pointer;
   font-weight: bold;
@@ -35,7 +36,7 @@ header {
 }
 
 .abas button:hover {
-  background-color: #003366;
+  background-color: #1100ff;
 }
 
 .busca {
@@ -82,12 +83,13 @@ main {
 }
 
 .noticia h3 {
-  background: linear-gradient(to right, #004d99, #0077cc);
+  background: linear-gradient(to right, rgb(0, 0, 139), rgb(0, 0, 139), rgba(25, 0, 255, 0));
   color: white;
-  padding: 10px;
-  margin-bottom: 10px;
-  font-size: 1.2em;
-  border-radius: 5px 5px 0 0;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  font-size: 1.3em;
+  border-radius: 8px 8px 0 0;
+  backdrop-filter: blur(2px);
 }
 
 .noticia-conteudo {
@@ -180,3 +182,24 @@ footer {
   }
 }
 
+
+.link-noticia {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-noticia:hover .noticia {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.noticia {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
