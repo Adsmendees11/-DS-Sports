@@ -14,4 +14,4 @@ Este é um projeto de site de notícias esportivas focado em times brasileiros e
 
 O site se adapta automaticamente a diferentes tamanhos de tela. No celular, o layout é ajustado para manter legibilidade e proporção das imagens.
 
-Acesse o site clicando aqui: 
+Acesse o site clicando aqui: https://adsmendees11.github.io/-DS-Sports/
