@@ -25,8 +25,8 @@ const noticias = [
   },
   {
     titulo: "Real Madrid goleia o Barcelona no Bernabéu",
-    imagem: "imagens/realmadrid.jpg",
-    texto: "Com atuação de destaque de Bellingham, os merengues vencem por 4x1.",
+    imagem: "photos/real madrid.webp",
+    texto: "Com atuação de destaque de Bellingham, os merengues vencem por 4x1...",
     data: "01/10/2025",
     categoria: "europeus",
     link: "noticia-real.html"
