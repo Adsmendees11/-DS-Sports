@@ -25,24 +25,35 @@
     <!-- Botão de compartilhar -->
     <button class="botao-compartilhar" onclick="mostrarNoticia()">📤 Compartilhar</button>
 
-    <!-- Card da notícia para compartilhar -->
-    <div class="noticia-compartilhada" id="noticia-compartilhada">
-      <img src="photos/corinthians x internacional.webp" alt="Corinthians em campo">
-      <h3>Corinthians empata contra o Internacional</h3>
-      <p>Em jogo polêmico por conta da arbitragem, Corinthians empata contra o Internacional e segue perto do Z4. O gol do empate veio no último minuto após pênalti polêmico.</p>
-      <a href="./noticia-corinthians.html" target="_blank">🔗 Ver notícia completa</a>
-    </div>
+    <!-- Card da notícia para compartilhar (gerado dinamicamente) -->
+    <div class="noticia-compartilhada" id="noticia-compartilhada"></div>
   </main>
 
   <script>
     function mostrarNoticia() {
       const card = document.getElementById("noticia-compartilhada");
+      const artigo = document.querySelector(".noticia-completa");
+
+      // Extrair dados da notícia principal
+      const titulo = artigo.querySelector("h2").textContent;
+      const imagemSrc = artigo.querySelector("img").getAttribute("src");
+      const imagemAlt = artigo.querySelector("img").getAttribute("alt");
+      const primeiroParagrafo = artigo.querySelector("p").textContent;
+
+      // Montar o conteúdo do card dinamicamente
+      card.innerHTML = `
+        <img src="${imagemSrc}" alt="${imagemAlt}">
+        <h3>${titulo}</h3>
+        <p>${primeiroParagrafo}</p>
+        <a href="./noticia-corinthians.html" target="_blank">🔗 Ver notícia completa</a>
+      `;
       card.style.display = "block";
 
+      // Compartilhamento nativo
       if (navigator.share) {
         navigator.share({
-          title: "Corinthians empata contra o Internacional",
-          text: "Em jogo polêmico, Corinthians empata contra o Internacional no último minuto.",
+          title: titulo,
+          text: primeiroParagrafo,
           url: "./noticia-corinthians.html"
         }).catch((error) => console.error("Erro ao compartilhar:", error));
       } else {
