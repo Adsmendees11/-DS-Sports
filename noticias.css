@@ -51,11 +51,18 @@ main {
   margin-top: 20px;
 }
 
+/* Botões lado a lado */
+.botoes-acoes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px auto;
+}
+
+/* Botão de voltar */
 .botao-seta {
-  display: block;
   width: 40px;
   height: 40px;
-  margin: 40px auto;
   background-color: #070069;
   border-radius: 8px;
   position: relative;
@@ -72,15 +79,15 @@ main {
   color: white;
 }
 
+/* Botão de compartilhar */
 .botao-compartilhar {
-  display: block;
-  margin: 30px auto;
-  padding: 12px 20px;
+  width: 40px;
+  height: 40px;
   background-color: #070069;
-  color: white;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 24px;
+  color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -89,42 +96,4 @@ main {
   background-color: #0a0a8f;
 }
 
-.noticia-compartilhada {
-  display: none;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 30px auto;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
-}
 
-.noticia-compartilhada img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.noticia-compartilhada h3 {
-  margin-top: 0;
-  font-size: 1.4em;
-  color: #070069;
-}
-
-.noticia-compartilhada p {
-  font-size: 1em;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.noticia-compartilhada a {
-  display: inline-block;
-  margin-top: 12px;
-  color: #070069;
-  font-weight: bold;
-  text-decoration: none;
-}

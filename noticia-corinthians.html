@@ -19,42 +19,24 @@
       <span class="data">01/10/2025</span>
     </article>
 
-    <!-- Botão de voltar -->
-    <a href="index.html" class="botao-seta"></a>
-
-    <!-- Botão de compartilhar -->
-    <button class="botao-compartilhar" onclick="mostrarNoticia()">📤 Compartilhar</button>
-
-    <!-- Card da notícia para compartilhar (gerado dinamicamente) -->
-    <div class="noticia-compartilhada" id="noticia-compartilhada"></div>
+    <!-- Botões lado a lado -->
+    <div class="botoes-acoes">
+      <a href="index.html" class="botao-seta"></a>
+      <button class="botao-compartilhar" onclick="compartilharPagina()">📤</button>
+    </div>
   </main>
 
   <script>
-    function mostrarNoticia() {
-      const card = document.getElementById("noticia-compartilhada");
-      const artigo = document.querySelector(".noticia-completa");
+    function compartilharPagina() {
+      const titulo = document.querySelector(".noticia-completa h2").textContent;
+      const primeiroParagrafo = document.querySelector(".noticia-completa p").textContent;
+      const urlAtual = window.location.href;
 
-      // Extrair dados da notícia principal
-      const titulo = artigo.querySelector("h2").textContent;
-      const imagemSrc = artigo.querySelector("img").getAttribute("src");
-      const imagemAlt = artigo.querySelector("img").getAttribute("alt");
-      const primeiroParagrafo = artigo.querySelector("p").textContent;
-
-      // Montar o conteúdo do card dinamicamente
-      card.innerHTML = `
-        <img src="${imagemSrc}" alt="${imagemAlt}">
-        <h3>${titulo}</h3>
-        <p>${primeiroParagrafo}</p>
-        <a href="./noticia-corinthians.html" target="_blank">🔗 Ver notícia completa</a>
-      `;
-      card.style.display = "block";
-
-      // Compartilhamento nativo
       if (navigator.share) {
         navigator.share({
           title: titulo,
           text: primeiroParagrafo,
-          url: "./noticia-corinthians.html"
+          url: urlAtual
         }).catch((error) => console.error("Erro ao compartilhar:", error));
       } else {
         alert("Compartilhamento não suportado neste navegador.");
