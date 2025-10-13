@@ -18,36 +18,37 @@
       <p>Carbonero bateu forte no canto direito do goleiro Hugo Souza, que até chegou a encostar na bola, mas não conseguiu evitar o empate do Colorado no último lance do jogo no Beira-Rio.</p>
       <span class="data">01/10/2025</span>
     </article>
+
     <!-- Botão de voltar -->
-<a href="index.html" class="botao-seta"></a>
+    <a href="index.html" class="botao-seta"></a>
 
+    <!-- Botão de compartilhar -->
+    <button class="botao-compartilhar" onclick="mostrarNoticia()">📤 Compartilhar</button>
 
-<!-- Botão de compartilhar -->
-<button class="botao-compartilhar" onclick="mostrarNoticia()">📤 Compartilhar</button>
-
-<!-- Card da notícia para compartilhar -->
-<div class="noticia-compartilhada" id="noticia-compartilhada">
-  <h3>Corinthians empata contra o Internacional</h3>
-  <p>Em jogo polêmico por conta da arbitragem, Corinthians empata contra o Internacional e segue perto do Z4. O gol do empate veio no último minuto após pênalti polêmico.</p>
-  <a href="./noticia-corinthians.html" target="_blank">🔗Ver notícia completa</a>
-</div>
-
+    <!-- Card da notícia para compartilhar -->
+    <div class="noticia-compartilhada" id="noticia-compartilhada">
+      <img src="photos/corinthians x internacional.webp" alt="Corinthians em campo">
+      <h3>Corinthians empata contra o Internacional</h3>
+      <p>Em jogo polêmico por conta da arbitragem, Corinthians empata contra o Internacional e segue perto do Z4. O gol do empate veio no último minuto após pênalti polêmico.</p>
+      <a href="./noticia-corinthians.html" target="_blank">🔗 Ver notícia completa</a>
+    </div>
   </main>
-  <script>
-function mostrarNoticia() {
-  const card = document.getElementById("noticia-compartilhada");
-  card.style.display = "block";
 
-  if (navigator.share) {
-    navigator.share({
-      title: "Corinthians empata contra o Internacional",
-      text: "Em jogo polêmico, Corinthians empata contra o Internacional no último minuto.",
-      url: "./noticia-corinthians.html"
-    }).catch((error) => console.error("Erro ao compartilhar:", error));
-  } else {
-    alert("Compartilhamento não suportado neste navegador.");
-  }
-}
-</script>
+  <script>
+    function mostrarNoticia() {
+      const card = document.getElementById("noticia-compartilhada");
+      card.style.display = "block";
+
+      if (navigator.share) {
+        navigator.share({
+          title: "Corinthians empata contra o Internacional",
+          text: "Em jogo polêmico, Corinthians empata contra o Internacional no último minuto.",
+          url: "./noticia-corinthians.html"
+        }).catch((error) => console.error("Erro ao compartilhar:", error));
+      } else {
+        alert("Compartilhamento não suportado neste navegador.");
+      }
+    }
+  </script>
 </body>
 </html>
