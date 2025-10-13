@@ -54,8 +54,8 @@ body {
 
 .botao-seta {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin: 40px auto;
   background-color: #070069; /* azul médio */
   border-radius: 8px;
@@ -64,11 +64,53 @@ body {
 }
 
 .botao-seta::before {
-  content: '←';
+  content: '↩';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 28px;
   color: white;
+}
+
+
+.botao-compartilhar {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 20px;
+  background-color: #070069;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botao-compartilhar:hover {
+  background-color: #0a0a8f;
+}
+
+.noticia-compartilhada {
+  display: none;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.noticia-compartilhada h3 {
+  margin-top: 0;
+}
+
+.noticia-compartilhada a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #070069;
+  font-weight: bold;
+  text-decoration: none;
 }
