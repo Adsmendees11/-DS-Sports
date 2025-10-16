@@ -120,3 +120,22 @@ function buscarNoticia() {
 document.addEventListener("DOMContentLoaded", () => {
   mostrarNoticias("todas");
 });
+
+const carousel = document.getElementById('carousel');
+
+  let scrollAmount = 0;
+  const scrollStep = 1; // pixels por frame
+  const scrollInterval = 10; // milissegundos
+
+  function autoScroll() {
+    scrollAmount += scrollStep;
+    carousel.scrollLeft = scrollAmount;
+
+    if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+      scrollAmount = 0;
+    }
+
+    setTimeout(autoScroll, scrollInterval);
+  }
+
+  autoScroll();
