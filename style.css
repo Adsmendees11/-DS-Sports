@@ -41,7 +41,7 @@ header {
 
 .busca {
   text-align: center;
-  margin: 20px;
+  margin: 1px;
 }
 
 .busca input {
@@ -201,4 +201,52 @@ footer {
   padding: 16px;
   margin-bottom: 20px;
   transition: transform 0.2s ease;
+}
+
+/* Layout sessão fotos de camisas de time */
+
+.anuncio {
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.anuncio h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  animation: deslizar 20s linear infinite;
+}
+
+.carousel-track img {
+  width: 150px;
+  height: auto;
+  margin: 0 10px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+@keyframes deslizar {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
