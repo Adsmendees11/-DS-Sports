@@ -221,7 +221,7 @@ footer {
 .carousel-container {
   overflow-x: auto; /* ✅ permite deslizar com o dedo */
   overflow-y: hidden;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   -webkit-overflow-scrolling: touch; /* ✅ suavidade no iOS */
   background-color: #f8f8f8;
   padding: 20px;

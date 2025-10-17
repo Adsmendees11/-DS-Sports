@@ -128,7 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
   clone.setAttribute("aria-hidden", "true");
   track.appendChild(clone);
 
-  let scrollStep = 1;
+  // 🐢 Velocidade ajustada para rolagem mais lenta e perceptível no iOS
+  let scrollStep = 0.5; // pixels por ciclo (mais lento)
   let isUserInteracting = false;
   let autoScrollFrame;
 
@@ -136,10 +137,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isUserInteracting) {
       carousel.scrollLeft += scrollStep;
 
+      // 🔁 Reinicia sem suavidade para evitar tremores no iOS
       if (carousel.scrollLeft >= track.scrollWidth / 2) {
         carousel.style.scrollBehavior = "auto";
         carousel.scrollLeft = 0;
-        carousel.style.scrollBehavior = "smooth";
+        // ❌ Não reativa "smooth" — manter "auto" para estabilidade no iOS
       }
     }
 
