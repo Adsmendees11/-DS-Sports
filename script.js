@@ -116,26 +116,57 @@ function buscarNoticia() {
   });
 }
 
-// Inicializa com todas as notícias
+
 document.addEventListener("DOMContentLoaded", () => {
+  // Inicializa as notícias
   mostrarNoticias("todas");
-});
 
-const carousel = document.getElementById('carousel');
+  const carousel = document.getElementById("carousel");
+  const track = carousel.querySelector(".carousel-track");
 
-  let scrollAmount = 0;
-  const scrollStep = 1; // pixels por frame
-  const scrollInterval = 10; // milissegundos
+  // 🔁 Duplica as imagens para criar efeito de loop infinito
+  const clone = track.cloneNode(true);
+  clone.setAttribute("aria-hidden", "true");
+  track.appendChild(clone);
+
+  // ⚙️ Configura rolagem automática com controle de suavidade
+  let scrollStep = 1; // pixels por ciclo (aumente para mais velocidade)
+  let scrollInterval = 10; // milissegundos entre ciclos (diminua para mais velocidade)
+  let isUserInteracting = false;
+  let autoScrollFrame;
 
   function autoScroll() {
-    scrollAmount += scrollStep;
-    carousel.scrollLeft = scrollAmount;
+    if (!isUserInteracting) {
+      carousel.scrollLeft += scrollStep;
 
-    if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
-      scrollAmount = 0;
+      // Quando chega no fim da primeira faixa, volta ao início sem tremor
+      if (carousel.scrollLeft >= track.scrollWidth / 2) {
+        carousel.style.scrollBehavior = "auto"; // desativa suavidade temporariamente
+        carousel.scrollLeft = 0;
+        carousel.style.scrollBehavior = "smooth"; // reativa suavidade
+      }
     }
 
-    setTimeout(autoScroll, scrollInterval);
+    autoScrollFrame = requestAnimationFrame(autoScroll);
   }
 
   autoScroll();
+
+  // 🛑 Pausar rolagem durante interação
+  function pauseAutoScroll() {
+    isUserInteracting = true;
+    cancelAnimationFrame(autoScrollFrame);
+  }
+
+  function resumeAutoScroll() {
+    isUserInteracting = false;
+    autoScroll();
+  }
+
+  // 🎯 Eventos de mouse e toque
+  carousel.addEventListener("mousedown", pauseAutoScroll);
+  carousel.addEventListener("mouseup", resumeAutoScroll);
+  carousel.addEventListener("mouseleave", resumeAutoScroll);
+  carousel.addEventListener("touchstart", pauseAutoScroll);
+  carousel.addEventListener("touchend", resumeAutoScroll);
+});

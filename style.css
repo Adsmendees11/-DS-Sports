@@ -217,12 +217,16 @@ footer {
   color: #333;
 }
 
+/* Container com rolagem horizontal */
 .carousel-container {
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  background-color: #f8f8f8;
+  background-color: #0000000f;
   padding: 20px;
+  white-space: nowrap;
+  position: relative;
 }
 
 .carousel-track {
