@@ -219,14 +219,13 @@ footer {
 
 /* Container com rolagem horizontal */
 .carousel-container {
-  overflow-x: auto;
+  overflow-x: auto; /* ✅ permite deslizar com o dedo */
   overflow-y: hidden;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  background-color: #0000000f;
+  -webkit-overflow-scrolling: touch; /* ✅ suavidade no iOS */
+  background-color: #f8f8f8;
   padding: 20px;
   white-space: nowrap;
-  position: relative;
 }
 
 .carousel-track {
@@ -250,4 +249,14 @@ footer {
 
 .carousel-track img.zoom {
   transform: scale(1.15);
+}
+
+/* 🔁 Animação infinita */
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

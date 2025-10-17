@@ -118,20 +118,17 @@ function buscarNoticia() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Inicializa as notícias
   mostrarNoticias("todas");
 
   const carousel = document.getElementById("carousel");
   const track = carousel.querySelector(".carousel-track");
 
-  // 🔁 Duplica as imagens para criar efeito de loop infinito
+  // 🔁 Duplica as imagens para criar efeito de loop visual
   const clone = track.cloneNode(true);
   clone.setAttribute("aria-hidden", "true");
   track.appendChild(clone);
 
-  // ⚙️ Configura rolagem automática com controle de suavidade
-  let scrollStep = 1; // pixels por ciclo (aumente para mais velocidade)
-  let scrollInterval = 10; // milissegundos entre ciclos (diminua para mais velocidade)
+  let scrollStep = 1;
   let isUserInteracting = false;
   let autoScrollFrame;
 
@@ -139,11 +136,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isUserInteracting) {
       carousel.scrollLeft += scrollStep;
 
-      // Quando chega no fim da primeira faixa, volta ao início sem tremor
       if (carousel.scrollLeft >= track.scrollWidth / 2) {
-        carousel.style.scrollBehavior = "auto"; // desativa suavidade temporariamente
+        carousel.style.scrollBehavior = "auto";
         carousel.scrollLeft = 0;
-        carousel.style.scrollBehavior = "smooth"; // reativa suavidade
+        carousel.style.scrollBehavior = "smooth";
       }
     }
 
@@ -152,7 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   autoScroll();
 
-  // 🛑 Pausar rolagem durante interação
   function pauseAutoScroll() {
     isUserInteracting = true;
     cancelAnimationFrame(autoScrollFrame);
@@ -163,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
     autoScroll();
   }
 
-  // 🎯 Eventos de mouse e toque
+  // ✅ Eventos de toque e mouse para pausar rolagem
   carousel.addEventListener("mousedown", pauseAutoScroll);
   carousel.addEventListener("mouseup", resumeAutoScroll);
   carousel.addEventListener("mouseleave", resumeAutoScroll);
