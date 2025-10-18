@@ -1,11 +1,11 @@
 const noticias = [
   {
-    titulo: "Corinthians empata contra o Internacional",
-    imagem: "photos/corinthians x internacional.webp",
-    texto: "Em jogo polêmico por conta da arbitragem, Corinthians empata contra o Internacional e segue perto do Z4...",
-    data: "01/10/2025",
+    titulo: "Juventude tenta abandonar o campo após gol do Fluminense no Maracanã",
+    imagem: "photos/fluminense-juventude.jpeg",
+    texto: "Uma cena inusitada marcou o Brasileirão neste fim de semana. Durante a partida entre Fluminense e Juventude...",
+    data: "17/10/2025",
     categoria: "brasileiros",
-    link: "noticia-corinthians.html"
+    link: "noticia-fluminense-juventude.html"
   },
   {
     titulo: "Palmeiras vence clássico contra o Corinthians",
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
   track.appendChild(clone);
 
   // 🐢 Velocidade ajustada para rolagem mais lenta e perceptível no iOS
-  let scrollStep = 0.5; // pixels por ciclo (mais lento)
+  let scrollStep = 0.5;
   let isUserInteracting = false;
   let autoScrollFrame;
 
@@ -141,7 +141,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (carousel.scrollLeft >= track.scrollWidth / 2) {
         carousel.style.scrollBehavior = "auto";
         carousel.scrollLeft = 0;
-        // ❌ Não reativa "smooth" — manter "auto" para estabilidade no iOS
+
+        // ✅ Reativa suavidade com pequeno atraso
+        setTimeout(() => {
+          carousel.style.scrollBehavior = "smooth";
+        }, 20);
       }
     }
 

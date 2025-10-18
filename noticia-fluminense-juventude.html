@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corinthians empata contra o Internacional</title>
+  <link rel="stylesheet" href="noticias.css">
+  <!-- Metatags Open Graph para pré-visualização -->
+<meta property="og:title" content="Corinthians empata contra o Internacional" />
+<meta property="og:description" content="Em jogo polêmico por conta da arbitragem, Corinthians empata contra o Internacional e segue perto do Z4..." />
+<meta property="og:image" content="https://adsmendees11.github.io/-DS-Sports/photos/corinthians%20x%20internacional.webp" />
+<meta property="og:url" content="https://adsmendees11.github.io/-DS-Sports/noticia-corinthians.html" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="pt_BR" />
+</head>
+<body>
+
+  <main>
+    <article class="noticia-completa">
+      <h2>Juventude tenta abandonar o campo após gol do Fluminense no Maracanã</h2>
+      <img src="photos/fluminense-juventude.jpeg" alt="fluminense x juventude">
+      <p>Uma cena inusitada marcou o Brasileirão neste fim de semana. Durante a partida entre Fluminense e Juventude, no Maracanã, os jogadores do time gaúcho tentaram deixar o campo em protesto contra a arbitragem.
+O lance polêmico aconteceu aos 53 minutos do segundo tempo, quando o árbitro aplicou a regra dos 8 segundos contra o goleiro do Juventude, resultando em um escanteio para o Fluminense. Na sequência, o time carioca marcou o gol da virada.
+Inconformados, atletas como Alan Ruschel e Nenê teriam se revoltado, afirmando que o time não continuaria a partida. Diante da recusa em reiniciar o jogo, o árbitro encerrou o confronto e relatou o episódio na súmula.
+O caso agora deve ser analisado pelo STJD, e o Juventude pode ser punido por tentativa de abandono de campo. O episódio gerou grande repercussão nas redes sociais e reacendeu o debate sobre os critérios da arbitragem brasileira.</p>
+      <span class="data">17/10/2025</span>
+      <a href="https://youtube.com/shorts/U62QZrKA4YA?si=GrndPtv6uf7hFoCU"> Assistir Notícia </a>
+    </article>
+
+    <!-- Botões lado a lado -->
+    <div class="botoes-acoes">
+      <a href="index.html" class="botao-seta">↻</a>
+      <button class="botao-compartilhar" onclick="compartilharPagina()"><svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+  <path d="M14 9V5l7 7-7 7v-4c-6 0-10 2-12 6 1-6 5-10 12-10z"/>
+</svg></button>
+    </div>
+  </main>
+
+  <script>
+   function compartilharPagina() {
+  const urlAtual = window.location.href;
+
+  if (navigator.share) {
+    navigator.share({
+      url: urlAtual
+    }).catch((error) => console.error("Erro ao compartilhar:", error));
+  } else {
+    alert("Compartilhamento não suportado neste navegador.");
+  }
+}
+  </script>
+</body>
+</html>
