@@ -221,6 +221,7 @@ footer {
 .carousel-container {
   overflow-x: auto; /* ✅ permite deslizar com o dedo */
   overflow-y: hidden;
+  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch; /* ✅ suavidade no iOS */
   background-color: #f8f8f8;
   padding: 20px;
@@ -230,7 +231,7 @@ footer {
 .carousel-track {
   display: flex;
   gap: 10px;
-  animation: scrollSlow 65s linear infinite; /* ⏱️ velocidade lenta e constante */
+  animation: scrollSlow 80s linear infinite; /* ⏱️ velocidade lenta e constante */
 }
 
 .carousel-track img {
@@ -251,12 +252,3 @@ footer {
   transform: scale(1.15);
 }
 
-/* 🔁 Animação infinita */
-@keyframes scrollLoop {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
