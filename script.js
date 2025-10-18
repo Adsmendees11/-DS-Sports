@@ -119,55 +119,19 @@ function buscarNoticia() {
 
 document.addEventListener("DOMContentLoaded", () => {
   mostrarNoticias("todas");
-
-  const carousel = document.getElementById("carousel");
-  const track = carousel.querySelector(".carousel-track");
-
-  // 🔁 Duplica as imagens para criar efeito de loop visual
-  const clone = track.cloneNode(true);
-  clone.setAttribute("aria-hidden", "true");
-  track.appendChild(clone);
-
-  // 🐢 Velocidade ajustada para rolagem mais lenta e perceptível no iOS
-  let scrollStep = 0.5;
-  let isUserInteracting = false;
-  let autoScrollFrame;
-
-  function autoScroll() {
-    if (!isUserInteracting) {
-      carousel.scrollLeft += scrollStep;
-
-      // 🔁 Reinicia sem suavidade para evitar tremores no iOS
-      if (carousel.scrollLeft >= track.scrollWidth / 2) {
-        carousel.style.scrollBehavior = "auto";
-        carousel.scrollLeft = 0;
-
-        // ✅ Reativa suavidade com pequeno atraso
-        setTimeout(() => {
-          carousel.style.scrollBehavior = "smooth";
-        }, 20);
-      }
-    }
-
-    autoScrollFrame = requestAnimationFrame(autoScroll);
-  }
-
-  autoScroll();
-
-  function pauseAutoScroll() {
-    isUserInteracting = true;
-    cancelAnimationFrame(autoScrollFrame);
-  }
-
-  function resumeAutoScroll() {
-    isUserInteracting = false;
-    autoScroll();
-  }
-
-  // ✅ Eventos de toque e mouse para pausar rolagem
-  carousel.addEventListener("mousedown", pauseAutoScroll);
-  carousel.addEventListener("mouseup", resumeAutoScroll);
-  carousel.addEventListener("mouseleave", resumeAutoScroll);
-  carousel.addEventListener("touchstart", pauseAutoScroll);
-  carousel.addEventListener("touchend", resumeAutoScroll);
 });
+
+  const imagens = document.querySelectorAll('.carousel-track img');
+
+  imagens.forEach(img => {
+    img.addEventListener('click', () => {
+      const confirmar = confirm(`Você se interessou por um produto? Deseja falar com nosso atendimento via WhatsApp?`);
+
+      if (confirmar) {
+        const numero = '5566992224255'; // coloque aqui o número do WhatsApp com DDD e país
+        const mensagem = encodeURIComponent(`Olá! Tenho interesse em um produto.`);
+        const link = `https://wa.me/${numero}?text=${mensagem}`;
+        window.open(link, '_blank');
+      }
+    });
+  });
