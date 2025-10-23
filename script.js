@@ -8,12 +8,12 @@ const noticias = [
     link: "noticia-fluminense-juventude.html"
   },
   {
-    titulo: "Palmeiras vence clássico contra o Corinthians",
-    imagem: "imagens/palmeiras.jpg",
-    texto: "Com gol de Endrick, o Verdão garante mais três pontos e se aproxima da liderança.",
-    data: "30/09/2025",
+    titulo: "O QUE ACONTECEU COM O TIME DO SÃO PAULO EM 2025?",
+    imagem: "photos/sãopaulo.photo.jpg",
+    texto: "O São Paulo sem dúvidas é um dos times que sempre vem forte em todas as competições que disputa, nesse ano de 2025...",
+    data: "22/10/2025",
     categoria: "brasileiros",
-    link: "noticia-palmeiras.html"
+    link: "noticia-sãopaulo.html"
   },
   {
     titulo: "Grêmio vence o Cruzeiro fora de casa",

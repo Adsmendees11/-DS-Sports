@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corinthians empata contra o Internacional</title>
+  <link rel="stylesheet" href="noticias.css">
+  <!-- Metatags Open Graph para pré-visualização -->
+<meta property="og:title" content="Corinthians empata contra o Internacional" />
+<meta property="og:description" content="Em jogo polêmico por conta da arbitragem, Corinthians empata contra o Internacional e segue perto do Z4..." />
+<meta property="og:image" content="https://adsmendees11.github.io/-DS-Sports/photos/corinthians%20x%20internacional.webp" />
+<meta property="og:url" content="https://adsmendees11.github.io/-DS-Sports/noticia-corinthians.html" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="pt_BR" />
+</head>
+<body>
+
+  <main>
+    <article class="noticia-completa">
+      <h2>O QUE ACONTECEU COM O TIME DO SÃO PAULO EM 2025?</h2>
+      <img src="photos/sãopaulo.photo.jpg" alt="sãopaulo">
+      <p>O São Paulo sem dúvidas é um dos times que sempre vem forte em todas as competições que disputa, nesse ano de 2025 com reforços de peso a equipe deveria estar brigando por títulos, mas as coisas muitas das vezes não acontecem como imaginamos. Atualmente o São Paulo vive com problemas no Departamento Médico, são mais de 5 jogadores no DM, incluindo Lucas Moura e Oscar, nomes de peso que quando estão em campo faz a diferença na equipe. Mas na sua opinião, o São Paulo mesmo sofrendo com esses problemas consegue ao menos garantir uma boa posição no campeonato brasileiro e conseguir uma vaga na Libertadores do próximo ano? 🤔⚽</p>
+      <span class="data">22/10/2025</span>
+      <a href="https://youtu.be/1AeL48heyjA?si=cdJt02CCHYgxAZeq"> Assistir Notícia </a>
+    </article>
+
+    <!-- Botões lado a lado -->
+    <div class="botoes-acoes">
+      <a href="index.html" class="botao-seta">↻</a>
+      <button class="botao-compartilhar" onclick="compartilharPagina()"><svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+  <path d="M14 9V5l7 7-7 7v-4c-6 0-10 2-12 6 1-6 5-10 12-10z"/>
+</svg></button>
+    </div>
+  </main>
+
+  <script>
+   function compartilharPagina() {
+  const urlAtual = window.location.href;
+
+  if (navigator.share) {
+    navigator.share({
+      url: urlAtual
+    }).catch((error) => console.error("Erro ao compartilhar:", error));
+  } else {
+    alert("Compartilhamento não suportado neste navegador.");
+  }
+}
+  </script>
+</body>
+</html>
