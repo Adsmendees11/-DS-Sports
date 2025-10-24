@@ -36,7 +36,7 @@ header {
 }
 
 .abas button:hover {
-  background-color: #1100ff;
+  background-color: #234bff;
 }
 
 .busca {
@@ -55,7 +55,7 @@ header {
 .busca button {
   padding: 10px 20px;
   margin-left: 10px;
-  background-color: #004d99;
+  background-color: #00027c;
   color: white;
   border: none;
   border-radius: 5px;
@@ -215,7 +215,6 @@ footer {
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap; /* permite quebrar em telas pequenas */
-  background-color: #ffffff;
   padding: 15px;
   margin: 15px;
 }
@@ -227,7 +226,7 @@ footer {
   overflow-y: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  background-color: #ffffff;
+  background-color: #04003d;
   padding: 20px;
   white-space: nowrap;
   border-radius: 8px;
