@@ -204,28 +204,49 @@ footer {
 }
 
 /* Layout sessão fotos de camisas de time */
-
 .anuncio {
   background-color: #f8f8f8;
-  text-align: center;
   padding: 20px;
 }
 
-.anuncio h2 {
-  font-size: 25px;
-  margin-bottom: 15px;
-  color: #333;
+/* Container que alinha logo e carrossel lado a lado */
+.linha-loja {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px; /* espaço entre logo e carrossel */
+  flex-wrap: wrap; /* permite quebrar em telas pequenas */
+  background-color: #ffffff;
+  padding: 15px;
+  margin: 15px;
+}
+
+/* Logo à esquerda */
+.logo-titulo {
+  height: 8em;
+  flex-shrink: 0;
+  margin-left: -15px;
 }
 
 /* Container com rolagem horizontal */
 .carousel-container {
-  overflow-x: auto; /* ✅ permite deslizar com o dedo */
+  flex: 1;
+  overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* ✅ suavidade no iOS */
+  -webkit-overflow-scrolling: touch;
   background-color: #f8f8f8;
   padding: 20px;
   white-space: nowrap;
+  border-radius: 8px;
+  margin-top: 0; /* removido o -9px para alinhamento melhor */
+}
+
+/* Imagens dentro do carrossel */
+.carousel-track img {
+  height: 120px;
+  margin-right: 10px;
+  border-radius: 4px;
 }
 
 .carousel-track {
