@@ -214,18 +214,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px; /* espaço entre logo e carrossel */
   flex-wrap: wrap; /* permite quebrar em telas pequenas */
   background-color: #ffffff;
   padding: 15px;
   margin: 15px;
-}
-
-/* Logo à esquerda */
-.logo-titulo {
-  height: 8em;
-  flex-shrink: 0;
-  margin-left: -15px;
 }
 
 /* Container com rolagem horizontal */
@@ -235,7 +227,7 @@ footer {
   overflow-y: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   padding: 20px;
   white-space: nowrap;
   border-radius: 8px;
