@@ -41,7 +41,7 @@ header {
 
 .busca {
   text-align: center;
-  margin: 1px;
+  margin: 5px;
 }
 
 .busca input {
@@ -60,6 +60,7 @@ header {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 5px; /*isso empurra o botão um pouco para baixo */
 }
 
 main {
@@ -216,7 +217,8 @@ footer {
   justify-content: flex-start;
   flex-wrap: wrap; /* permite quebrar em telas pequenas */
   padding: 15px;
-  margin: 15px;
+  margin: 1px;
+  margin-top: 13px;
 }
 
 /* Container com rolagem horizontal */
