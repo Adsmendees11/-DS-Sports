@@ -16,17 +16,17 @@ const noticias = [
     link: "noticia-sãopaulo.html"
   },
   {
-    titulo: "Grêmio vence o Cruzeiro fora de casa",
-    imagem: "photos/photo_perfil.jpg",
-    texto: "Com gol de Suárez, Grêmio garante vitória importante na reta final do Brasileirão.",
-    data: "01/10/2025",
-    categoria: "brasileiros",
-    link: "noticia-gremio.html"
+    titulo: "Real Madrid bate Barcelona no El Clássico",
+    imagem: "photos/realmadrid-barcelona.jpg",
+    texto: "Vinicius Jr se revolta após substituição em Real Madrid x Barcelona…",
+    data: "26/10/2025",
+    categoria: "europeus",
+    link: "noticia-viniciusjr.html"
   },
   {
     titulo: "Real Madrid goleia o Barcelona no Bernabéu",
     imagem: "photos/real madrid.webp",
-    texto: "Com atuação de destaque de Bellingham, os merengues vencem por 4x1...",
+    texto: "Vinicius Jr se revolta após substituição em Real Madrid x Barcelona…",
     data: "01/10/2025",
     categoria: "europeus",
     link: "noticia-real.html"
