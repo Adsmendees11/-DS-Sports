@@ -24,12 +24,12 @@ const noticias = [
     link: "noticia-viniciusjr.html"
   },
   {
-    titulo: "Real Madrid goleia o Barcelona no Bernabéu",
-    imagem: "photos/real madrid.webp",
-    texto: "Vinicius Jr se revolta após substituição em Real Madrid x Barcelona…",
-    data: "01/10/2025",
+    titulo: "Kylian Mbappé: O próximo melhor jogador do mundo?",
+    imagem: "photos/mbappe.jpeg",
+    texto: "Desde sua chegada ao Real Madrid Mbappé vem mostrando que tem…",
+    data: "01/11/2025",
     categoria: "europeus",
-    link: "noticia-real.html"
+    link: "noticia-mbappe.html"
   },
   {
     titulo: "Manchester City vence o Arsenal fora de casa",
