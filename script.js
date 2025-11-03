@@ -32,12 +32,12 @@ const noticias = [
     link: "noticia-mbappe.html"
   },
   {
-    titulo: "Manchester City vence o Arsenal fora de casa",
-    imagem: "imagens/manchester.jpg",
-    texto: "Com dois gols de Haaland, os Citizens seguem firmes na liderança da Premier League.",
-    data: "29/09/2025",
+    titulo: "Real Madrid 4x0 Valencia: Endrick volta a ter chance na La Liga",
+    imagem: "photos/endrick.jpg",
+    texto: "Vinícius Júnior perdeu um pênalti… mas o Real Madrid não perdoou o Valencia...",
+    data: "02/11/2025",
     categoria: "europeus",
-    link: "noticia-city.html"
+    link: "noticia-endrick.html"
   }
 ];
 
