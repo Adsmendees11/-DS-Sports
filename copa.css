@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background-color: #004080;
+  color: white;
+  padding: 20px;
+}
+
+.logo {
+  max-width: 185px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.descricao {
+  max-width: 90%;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+section {
+  padding: 15px;
+}
+
+.equipes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.equipes li {
+  background-color: #e0e0e0;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.noticias {
+  padding: 15px;
+  background-color: #fff;
+}
+
+.noticia {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.noticia img {
+  width: 100%;
+  max-width: 150px;
+  object-fit: cover;
+}
+
+.conteudo-noticia {
+  flex: 1;
+  padding: 10px;
+}
+
+.artilharia {
+  padding: 15px;
+  background-color: #e9f5ff;
+}
+
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .noticia {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .conteudo-noticia {
+    padding: 10px;
+    text-align: center;
+  }
+
+  th, td {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+}

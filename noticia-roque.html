@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corinthians empata contra o Internacional</title>
+  <link rel="stylesheet" href="noticias.css">
+  <!-- Metatags Open Graph para pré-visualização -->
+<meta property="og:title" content="Vitor Roque convocado para a seleção brasileira" />
+<meta property="og:description" content="Vitor Roque, jovem promessa do futebol brasileiro, foi convocado para a seleção principal do Brasil..." />
+<meta property="og:image" content="https://adsmendees11.github.io/-DS-Sports/photos/vitor-roque.webp" />
+<meta property="og:url" content="https://adsmendees11.github.io/-DS-Sports/noticia-roque.html" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="pt_BR" />
+</head>
+<body>
+
+  <main>
+    <article class="noticia-completa">
+      <h2>Vitor Roque convocado para a seleção brasileira</h2>
+      <img src="photos/vitor-roque.webp" alt="sãopaulo">
+      <p>Vitor Roque, jovem promessa do futebol brasileiro, foi convocado para a seleção principal do Brasil comandada por Carlo Ancelotti. Quando chegou ao Palmeiras o jogador foi alvo de críticas severas, mas nunca deixou de trabalhar e persistir em momentos difíceis, atualmente Vitor Roque com 16 gols nessa temporada com a camisa de palmeiras e está perto de ultrapassar seus recordes de gols quando atuava no Athletico Paranaense em 2023. Agora com a chance na seleção brasileira o garoto pode se tornar uma peça principal para o Brasil e quem sabe ser o camisa 9 que a seleção tanto precisa. </p>
+      <span class="data">22/10/2025</span>
+      <a href="https://www.youtube.com/shorts/FgO0riMn_Lw"> Assistir Notícia </a>
+    </article>
+
+    <!-- Botões lado a lado -->
+    <div class="botoes-acoes">
+      <a href="index.html" class="botao-seta">↻</a>
+      <button class="botao-compartilhar" onclick="compartilharPagina()"><svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+  <path d="M14 9V5l7 7-7 7v-4c-6 0-10 2-12 6 1-6 5-10 12-10z"/>
+</svg></button>
+    </div>
+  </main>
+
+  <script>
+   function compartilharPagina() {
+  const urlAtual = window.location.href;
+
+  if (navigator.share) {
+    navigator.share({
+      url: urlAtual
+    }).catch((error) => console.error("Erro ao compartilhar:", error));
+  } else {
+    alert("Compartilhamento não suportado neste navegador.");
+  }
+}
+  </script>
+</body>
+</html>

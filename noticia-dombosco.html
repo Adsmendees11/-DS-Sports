@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copa Dom Bosco de Futsal</title>
+  <link rel="stylesheet" href="copa.css" />
+</head>
+<body>
+  <header>
+    <img src="photos/logocopa.jpg" alt="Logo da Copa Dom Bosco" class="logo" />
+    <h1>Copa Dom Bosco de Futsal 2025</h1>
+    <p class="descricao">
+      A Copa Dom Bosco de Futsal reúne equipes locais em uma disputa eletrizante pelo título. A competição começa em <strong>15 de novembro de 2025</strong>.
+    </p>
+  </header>
+
+  <section class="seletor-categoria">
+    <label for="categoria">Escolha a categoria:</label>
+    <select id="categoria">
+      <option value="sub11-m">Sub11 Masculino</option>
+      <option value="sub13-m">Sub13 Masculino</option>
+      <option value="sub15-m">Sub15 Masculino</option>
+      <option value="sub17-m">Sub17 Masculino</option>
+      <option value="sub19-m">Sub19 Masculino</option>
+      <option value="sub13-f">Sub13 Feminino</option>
+      <option value="sub15-f">Sub15 Feminino</option>
+      <option value="livre-f">Livre Feminino</option>
+    </select>
+  </section>
+
+  <section class="equipes">
+    <h2>Equipes Participantes</h2>
+    <ul id="lista-equipes">
+      <!-- Preenchido via JavaScript -->
+    </ul>
+  </section>
+
+  <section class="classificacao">
+    <h2>Classificação</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Posição</th>
+          <th>Equipe</th>
+          <th>Vitórias</th>
+          <th>Empates</th>
+          <th>Derrotas</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-classificacao">
+        <!-- Preenchido via JavaScript -->
+      </tbody>
+    </table>
+  </section>
+
+  <section class="noticias">
+    <h2>Notícias da Copa</h2>
+    <div id="bloco-noticias">
+      <!-- Exemplo de notícia preenchida via JavaScript -->
+    </div>
+  </section>
+
+  <section class="artilharia">
+    <h2>Artilharia da Copa</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Jogador</th>
+          <th>Equipe</th>
+          <th>Gols</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-artilharia">
+        <!-- Preenchido via JavaScript -->
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>Organização: João Silva</p>
+    <p>Contato: joaosilva@copadombosco.com | (65) 99999-9999</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
