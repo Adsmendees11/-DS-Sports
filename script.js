@@ -49,7 +49,7 @@ const noticias = [
   },
    {
     titulo: "Inicio da Copa Dom Bosco 2025",
-    imagem: "photos/endrick.jpg",
+    imagem: "photos/logocopa.jpg",
     texto: "A tão esperada Copa Dom Bosco 2025 está prestes a começar...",
     data: "02/11/2025",
     categoria: "copa",
@@ -175,7 +175,7 @@ const dadosPorCategoria = {
     ],
     noticias: [
       {
-        imagem: "dom-bosco-fc.jpg",
+        imagem: "photos/IMG_4056.jpg",
         titulo: "Dom Bosco FC vence Primavera United por 2x1",
         texto: "João Pedro e Lucas Silva marcaram para Dom Bosco. Rafael fez o gol da Primavera."
       },
