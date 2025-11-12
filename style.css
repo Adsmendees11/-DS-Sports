@@ -139,26 +139,16 @@ footer {
 }
 
 @media (max-width: 600px) {
- .abas {
+  .abas {
     flex-direction: row;
-    flex-wrap: wrap; /* permite que os botões quebrem linha */
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 5px;
-    padding: 10px;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
   }
 
   .abas button {
     font-size: 0.7em;
-    padding: 6px 10px;
-    white-space: normal; /* permite quebra de linha */
-    word-break: break-word;
-    max-width: 100px; /* limita largura do botão */
-    text-align: center;
+    padding: 6px;
   }
-
 
   .busca input {
     width: 80%;
