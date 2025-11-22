@@ -168,14 +168,10 @@ const dadosPorCategoria = {
       { jogador: "João Pedro", equipe: "Dom Bosco FC", gols: 4 },
       { jogador: "Lucas Silva", equipe: "Dom Bosco FC", gols: 3 },
       { jogador: "Rafael", equipe: "Primavera United", gols: 2 },
-      { jogador: "Carlos Mendes", equipe: "Atlético Leste", gols: 2 },
-      { jogador: "Bruno Rocha", equipe: "Juventude do Cerrado", gols: 1 },
-      { jogador: "Henrique", equipe: "Primavera United", gols: 1 },
-      { jogador: "Eduardo Lima", equipe: "Atlético Leste", gols: 1 },
     ],
     noticias: [
       {
-        imagem: "photos/IMG_4056.jpg",
+        imagem: "photos/",
         titulo: "Dom Bosco FC vence Primavera United por 2x1",
         texto: "João Pedro e Lucas Silva marcaram para Dom Bosco. Rafael fez o gol da Primavera."
       },
