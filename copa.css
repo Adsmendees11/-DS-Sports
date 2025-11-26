@@ -2,13 +2,13 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #fff; /* fundo branco */
+  color: #1a1a1a; /* texto preto */
 }
 
 header {
   text-align: center;
-  background-color: #004080;
+  background: linear-gradient(to top, #220013, #640032, #8a0045);
   color: white;
   padding: 20px;
 }
@@ -35,11 +35,23 @@ section {
 }
 
 .equipes li {
-  background-color: #e0e0e0;
+  background-color: #fce4ec; /* rosa claro */
   margin: 5px 0;
   padding: 8px;
   border-radius: 5px;
   font-size: 0.95rem;
+  color: #220013;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.equipes li img.logo-time {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #8a0045;
 }
 
 table {
@@ -56,38 +68,75 @@ td {
   text-align: center;
 }
 
-.noticias {
-  padding: 15px;
-  background-color: #fff;
+th {
+  background: linear-gradient(to top, #220013, #640032, #8a0045);
+  color: white;
 }
 
-.noticia {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 15px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.noticia img {
-  width: 100%;
-  max-width: 150px;
-  object-fit: cover;
-}
-
-.conteudo-noticia {
-  flex: 1;
-  padding: 10px;
+.classificacao tbody tr:nth-child(-n+2) {
+  background-color: #ca00d136; /* destaque rosa claro para líder */
 }
 
 .artilharia {
   padding: 15px;
-  background-color: #e9f5ff;
+  background-color: #f9f9f9;
+}
+
+/* Jogos */
+.jogo {
+  border: 2px solid #8a0045;
+  padding: 15px;
+  margin: 15px 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.duelo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: nowrap; /* força horizontal */
+}
+
+.duelo img.logo-time {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #8a0045;
+  background: #fff;
+}
+
+.nome-time {
+  font-weight: bold;
+  color: #220013;
+}
+
+.placar {
+  font-size: 15px;
+}
+
+.btn-resultado {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 16px;
+  background: linear-gradient(to top, #220013, #640032, #8a0045);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-resultado:hover {
+  background: #640032;
 }
 
 footer {
-  background-color: #004080;
+  background: linear-gradient(to top, #220013, #640032, #8a0045);
   color: white;
   text-align: center;
   padding: 10px;
@@ -100,14 +149,15 @@ footer {
     font-size: 1.4rem;
   }
 
-  .noticia {
-    flex-direction: column;
-    align-items: center;
+  .duelo {
+    flex-direction: row; /* mantém horizontal no celular */
+    flex-wrap: nowrap;
+    gap: 6px;
+    font-size: 0.85rem;
   }
 
-  .conteudo-noticia {
-    padding: 10px;
-    text-align: center;
+  .btn-resultado {
+    width: 100%;
   }
 
   th, td {
