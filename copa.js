@@ -2,26 +2,26 @@
 const dadosPorCategoria = {
   "sub11-m": {
     equipes: [
-      { nome: "Dom Bosco FC", logo: "photos/" },
+      { nome: "Dom Bosco", logo: "photos/dombosco.png" },
       { nome: "Primavera United", logo: "photos/primavera.png" },
       { nome: "Atlético Leste", logo: "photos/atletico.png" },
       { nome: "Juventude do Cerrado", logo: "photos/juventude.png" }
     ],
     classificacao: [
-      { equipe: "Dom Bosco FC", v: 0, e: 1, d: 0 },
+      { equipe: "Dom Bosco", v: 0, e: 1, d: 0 },
       { equipe: "Primavera United", v: 2, e: 1, d: 0 },
       { equipe: "Atlético Leste", v: 0, e: 0, d: 0 },
       { equipe: "Juventude do Cerrado", v: 0, e: 0, d: 0 },
     ],
     artilharia: [
-      { jogador: "João Pedro", equipe: "Dom Bosco FC", gols: 4 },
-      { jogador: "Lucas Silva", equipe: "Dom Bosco FC", gols: 3 },
+      { jogador: "João Pedro", equipe: "Dom Bosco", gols: 4 },
+      { jogador: "Lucas Silva", equipe: "Dom Bosco", gols: 3 },
       { jogador: "Rafael", equipe: "Primavera United", gols: 2 },
     ],
     jogos: [
-      { equipeA: "Dom Bosco FC", equipeB: "Primavera United", placar: "2 x 2" },
-      { equipeA: "Dom Bosco FC", equipeB: "Atlético Leste", placar: "" },
-      { equipeA: "Dom Bosco FC", equipeB: "Juventude do Cerrado", placar: "" },
+      { equipeA: "Dom Bosco", equipeB: "Primavera United", placar: "2 x 2" },
+      { equipeA: "Dom Bosco", equipeB: "Atlético Leste", placar: "" },
+      { equipeA: "Dom Bosco", equipeB: "Juventude do Cerrado", placar: "" },
       { equipeA: "Primavera United", equipeB: "Atlético Leste", placar: "" },
       { equipeA: "Primavera United", equipeB: "Juventude do Cerrado", placar: "" },
       { equipeA: "Atlético Leste", equipeB: "Juventude do Cerrado", placar: "" }
@@ -283,7 +283,7 @@ dados.jogos.forEach((jogo, i) => {
       <span class="nome-time">${jogo.equipeA}</span>
 
       <div class="meio">
-        <span class="versus">VS</span>
+        <span class="versus">VS</span> <br>
         <span class="placar" id="placar-${categoria}-${i}">Não definido</span>
       </div>
 

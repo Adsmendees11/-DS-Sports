@@ -125,16 +125,22 @@ th {
 .duelo img.logo-time {
   width: 40px;
   height: 40px;
-  object-fit: contain;
+  min-width: 40px;        /* adicione isto */
+  min-height: 40px;       /* adicione isto */
+  object-fit: cover;      /* mude de contain para cover */
   border-radius: 50%;
   border: 2px solid #8a0045;
   background: #fff;
+  flex-shrink: 0;         /* adicione isto */
+  aspect-ratio: 1 / 1;    /* adicione isto */
 }
 
 .duelo .meio {
   display: flex;
-  flex-direction: column; /* X em cima, placar embaixo */
+  flex-direction: column;   /* X em cima, placar embaixo */
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 4px;
   min-width: 50px;
 }
@@ -147,10 +153,9 @@ th {
 
 .duelo .placar {
   font-size: 0.9rem;
-  color: #000000;
+  color: #000;
+  white-space: nowrap;      /* impede quebra de linha */
 }
-
-
 
 .nome-time {
   font-weight: bold;
@@ -210,7 +215,7 @@ footer {
   }
 
   th, td {
-    font-size: 0.7rem;     /* texto menor */
+    font-size: 0.8rem;     /* texto menor */
     padding: 4px;          /* menos espaço interno */
   }
 }
