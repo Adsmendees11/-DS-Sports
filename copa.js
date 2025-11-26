@@ -19,7 +19,7 @@ const dadosPorCategoria = {
       { jogador: "Rafael", equipe: "Primavera United", gols: 2 },
     ],
     jogos: [
-      { equipeA: "Dom Bosco FC", equipeB: "Primavera United", placar: "2x2" },
+      { equipeA: "Dom Bosco FC", equipeB: "Primavera United", placar: "2 x 2" },
       { equipeA: "Dom Bosco FC", equipeB: "Atlético Leste", placar: "" },
       { equipeA: "Dom Bosco FC", equipeB: "Juventude do Cerrado", placar: "" },
       { equipeA: "Primavera United", equipeB: "Atlético Leste", placar: "" },
@@ -281,7 +281,12 @@ dados.jogos.forEach((jogo, i) => {
     <div class="duelo" id="duelo-${categoria}-${i}">
       <img src="${buscarLogo(dados.equipes, jogo.equipeA)}" alt="${jogo.equipeA}" class="logo-time">
       <span class="nome-time">${jogo.equipeA}</span>
-      <span class="placar" id="placar-${categoria}-${i}">Não definido</span>
+
+      <div class="meio">
+        <span class="versus">VS</span>
+        <span class="placar" id="placar-${categoria}-${i}">Não definido</span>
+      </div>
+
       <span class="nome-time">${jogo.equipeB}</span>
       <img src="${buscarLogo(dados.equipes, jogo.equipeB)}" alt="${jogo.equipeB}" class="logo-time">
     </div>
