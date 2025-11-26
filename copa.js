@@ -2,7 +2,7 @@
 const dadosPorCategoria = {
   "sub11-m": {
     equipes: [
-      { nome: "Dom Bosco FC", logo: "photos/dom-bosco.png" },
+      { nome: "Dom Bosco FC", logo: "photos/" },
       { nome: "Primavera United", logo: "photos/primavera.png" },
       { nome: "Atlético Leste", logo: "photos/atletico.png" },
       { nome: "Juventude do Cerrado", logo: "photos/juventude.png" }
@@ -242,25 +242,25 @@ function atualizarTabelas(categoria) {
   });
 
   // Classificação (calcula pontos e ordena)
-  const classificacaoOrdenada = dados.classificacao
-    .map(time => ({
-      ...time,
-      pontos: (time.v * 3) + (time.e * 1) // vitórias = 3, empates = 1
-    }))
-    .sort((a, b) => b.pontos - a.pontos);
+const classificacaoOrdenada = dados.classificacao
+  .map(time => ({
+    ...time,
+    pontos: (time.v * 3) + (time.e * 1) // vitórias = 3, empates = 1
+  }))
+  .sort((a, b) => b.pontos - a.pontos);
 
-  classificacaoOrdenada.forEach((time, index) => {
-    const linha = document.createElement("tr");
-    linha.innerHTML = `
-      <td>${index + 1}</td>
-      <td>${time.equipe}</td>
-      <td>${time.v}</td>
-      <td>${time.e}</td>
-      <td>${time.d}</td>
-      <td>${time.pontos}</td>
-    `;
-    tabelaClassificacao.appendChild(linha);
-  });
+classificacaoOrdenada.forEach((time, index) => {
+  const linha = document.createElement("tr");
+  linha.innerHTML = `
+    <td>${index + 1}°</td>   <!-- posição com símbolo de ordinal -->
+    <td>${time.equipe}</td>
+    <td>${time.v}</td>
+    <td>${time.e}</td>
+    <td>${time.d}</td>
+    <td>${time.pontos}</td>
+  `;
+  tabelaClassificacao.appendChild(linha);
+});
 
   // Artilharia
   dados.artilharia.forEach((jogador) => {

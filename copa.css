@@ -26,7 +26,7 @@ header {
 }
 
 section {
-  padding: 15px;
+  padding: 10px;
 }
 
 .equipes ul {
@@ -74,8 +74,29 @@ th {
 }
 
 .classificacao tbody tr:nth-child(-n+2) {
-  background-color: #ca00d136; /* destaque rosa claro para líder */
+  background-color: #00ff2a2f; /* destaque claro para líder */
 }
+
+.legenda {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.legenda .quadrado {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+/* Mesma cor usada nos selecionados da tabela */
+.legenda .selecionado {
+  background-color: #00ff2a2f; /* verde claro padrão */
+}
+
 
 .artilharia {
   padding: 15px;
