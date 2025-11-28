@@ -73,8 +73,26 @@ th {
   color: white;
 }
 
+/* Quadradinho na legenda */
+.legenda .selecionado {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  vertical-align: middle;
+  background-color: #00ff2a2f; /* verde claro */
+  border-radius: 2px; /* opcional */
+}
+
+/* Destaque padrão para os classificados (outros subs): 2 primeiros */
 .classificacao tbody tr:nth-child(-n+2) {
-  background-color: #00ff2a2f; /* destaque claro para líder */
+  background-color: #00ff2a2f; /* verde claro para os dois primeiros */
+}
+
+/* Sub19: aplica a mesma cor só ao primeiro colocado (via classe adicionada no JS) */
+.tabela-classificacao-grupo tr.selecionado {
+  background-color: #00ff2a2f; /* mesma cor da legenda */
+  font-weight: bold;
 }
 
 .legenda {
@@ -186,6 +204,10 @@ footer {
   text-align: center;
   padding: 10px;
   font-size: 0.9rem;
+}
+
+footer p {
+  margin: 5px 0; /* espaçamento entre linhas */
 }
 
 /* Responsivo */

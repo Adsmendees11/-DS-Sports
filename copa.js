@@ -62,7 +62,7 @@ const dadosPorCategoria = {
 
     classificacao: [
       { equipe: "APEC", v: 0, e: 0, d: 0 },
-      { equipe: "São Cristóvão", v: 1, e: 0, d: 0 },
+      { equipe: "São Cristóvão", v: 0, e: 0, d: 0 },
       { equipe: "Primaverense", v: 0, e: 0, d: 0 },
       { equipe: "Brazukas", v: 0, e: 0, d: 0 },
     ],
@@ -88,64 +88,155 @@ const dadosPorCategoria = {
   },
 
  // ...existing code...
-  "sub15-m": {
-    grupos: {
-      A: [
-        { nome: "PNS E.C", logo: "photos/pns.png" },
-        { nome: "Mainstreet Futsal", logo: "photos/mainstreet.png" },
-        { nome: "Errei fui mlk", logo: "photos/errei.png" },
-        { nome: "Botafogo F.C", logo: "photos/botafogo.png" },
-      ],
-      B: [
-        { nome: "Os Mata Pato", logo: "photos/matapato.png" },
-        { nome: "APEC SP", logo: "photos/apecsp.png" },
-        { nome: "Primaverense", logo: "photos/primavera.png" },
-      ]
-    },
-
-    classificacao: {
-      A: [
-        { equipe: "PNS E.C", v: 0, e: 0, d: 0 },
-        { equipe: "Mainstreet Futsal", v: 0, e: 0, d: 0 },
-        { equipe: "Errei fui mlk", v: 0, e: 0, d: 0 },
-        { equipe: "Botafogo F.C", v: 0, e: 0, d: 0 },
-      ],
-      B: [
-        { equipe: "Os Mata Pato", v: 0, e: 0, d: 0 },
-        { equipe: "APEC SP", v: 0, e: 0, d: 0 },
-        { equipe: "Primaverense", v: 0, e: 0, d: 0 },
-      ]
-    },
-
-    artilharia: [
-      { jogador: "", equipe: "", gols: 0 },
-      { jogador: "", equipe: "", gols: 0 },
-      { jogador: "", equipe: "", gols: 0 },
+ "sub15-m": {
+  grupos: {
+    A: [
+      { nome: "APEC JRV", logo: "photos/apecjrv.png" },
+      { nome: "Os Mata Pato", logo: "photos/matapato.png" },
+      { nome: "Mainstreet Futsal", logo: "photos/mainstreet.png" },
+      { nome: "Botafofo F.C", logo: "photos/botafogo.png" }
     ],
-
-    jogos: [
-      // Grupo A (6 jogos)
-      { equipeA: "PNS E.C", equipeB: "Mainstreet Futsal", placar: "" },
-      { equipeA: "PNS E.C", equipeB: "Errei fui mlk", placar: "" },
-      { equipeA: "PNS E.C", equipeB: "Botafogo F.C", placar: "" },
-      { equipeA: "Mainstreet Futsal", equipeB: "Errei fui mlk", placar: "" },
-      { equipeA: "Mainstreet Futsal", equipeB: "Botafogo F.C", placar: "" },
-      { equipeA: "Errei fui mlk", equipeB: "Botafogo F.C", placar: "" },
-
-      // Grupo B (3 jogos)
-      { equipeA: "Os Mata Pato", equipeB: "APEC SP", placar: "" },
-      { equipeA: "Os Mata Pato", equipeB: "Primaverense", placar: "" },
-      { equipeA: "APEC SP", equipeB: "Primaverense", placar: "" },
-
-      // Semifinais - manter placeholders até preencher manualmente ou automaticamente
-      { equipeA: "1º Grupo A", equipeB: "2º Grupo B", placar: "" },
-      { equipeA: "1º Grupo B", equipeB: "2º Grupo A", placar: "" },
-
-      // Final
-      { equipeA: "Vencedor Semi 1", equipeB: "Vencedor Semi 2", placar: "" }
+    B: [
+      { nome: "PNS E.C", logo: "photos/pns.png" },
+      { nome: "APEC SP", logo: "photos/apecsp.png" },
+      { nome: "Errei fui mlk", logo: "photos/errei.png" }
     ]
   },
-  // ...existing code...
+
+  classificacao: {
+    A: [
+      { equipe: "APEC JRV", v: 0, e: 0, d: 0 },
+      { equipe: "Os Mata Pato", v: 0, e: 0, d: 0 },
+      { equipe: "Mainstreet Futsal", v: 0, e: 0, d: 0 },
+      { equipe: "Botafofo F.C", v: 0, e: 0, d: 0 }
+    ],
+    B: [
+      { equipe: "PNS E.C", v: 0, e: 0, d: 0 },
+      { equipe: "APEC SP", v: 0, e: 0, d: 0 },
+      { equipe: "Errei fui mlk", v: 0, e: 0, d: 0 }
+    ]
+  },
+
+  artilharia: [
+    { jogador: "", equipe: "", gols: 0 },
+    { jogador: "", equipe: "", gols: 0 },
+    { jogador: "", equipe: "", gols: 0 }
+  ],
+
+  jogos: [
+    // Confrontos na ordem definida
+    { equipeA: "APEC JRV", equipeB: "Os Mata Pato", placar: "" },
+    { equipeA: "Botafofo F.C", equipeB: "Mainstreet Futsal", placar: "" },
+    { equipeA: "APEC SP", equipeB: "PNS E.C", placar: "" },
+    { equipeA: "APEC JRV", equipeB: "Mainstreet Futsal", placar: "" },
+    { equipeA: "Botafofo F.C", equipeB: "Os Mata Pato", placar: "" },
+    { equipeA: "APEC SP", equipeB: "Errei fui mlk", placar: "" },
+    { equipeA: "PNS E.C", equipeB: "Errei fui mlk", placar: "" },
+    { equipeA: "Os Mata Pato", equipeB: "Mainstreet Futsal", placar: "" },
+    { equipeA: "APEC JRV", equipeB: "Botafofo F.C", placar: "" },
+
+    // Semifinais - placeholders
+    { equipeA: "1º Grupo A", equipeB: "2º Grupo B", placar: "" },
+    { equipeA: "1º Grupo B", equipeB: "2º Grupo A", placar: "" },
+
+    // Final
+    { equipeA: "Vencedor Semi 1", equipeB: "Vencedor Semi 2", placar: "" }
+  ]
+},
+// ...existing code...
+
+ "sub17-m": {
+  grupos: {
+    A: [
+      { nome: "PNS E.C", logo: "photos/pns.png" },
+      { nome: "Leicester PVA", logo: "photos/leicester.png" },
+      { nome: "Os Mata Pato", logo: "photos/matapato.png" },
+      { nome: "Os Mafioso", logo: "photos/mafioso.png" }
+    ],
+    B: [
+      { nome: "União PVA", logo: "photos/uniao.png" },
+      { nome: "APEC", logo: "photos/apec.png" },
+      { nome: "Primaverense", logo: "photos/primavera.png" }
+    ]
+  },
+
+  classificacao: {
+    A: [
+      { equipe: "PNS E.C", v: 0, e: 0, d: 0 },
+      { equipe: "Leicester PVA", v: 0, e: 0, d: 0 },
+      { equipe: "Os Mata Pato", v: 0, e: 0, d: 0 },
+      { equipe: "Os Mafioso", v: 0, e: 0, d: 0 }
+    ],
+    B: [
+      { equipe: "União PVA", v: 0, e: 0, d: 0 },
+      { equipe: "APEC", v: 0, e: 0, d: 0 },
+      { equipe: "Primaverense", v: 0, e: 0, d: 0 }
+    ]
+  },
+
+  artilharia: [
+    { jogador: "", equipe: "", gols: 0 },
+    { jogador: "", equipe: "", gols: 0 },
+    { jogador: "", equipe: "", gols: 0 }
+  ],
+
+  jogos: [
+    // Grupo A (6 jogos)
+    { equipeA: "PNS E.C", equipeB: "Leicester PVA", placar: "" },
+    { equipeA: "Os Mata Pato", equipeB: "Os Mafioso", placar: "" },
+    { equipeA: "PNS E.C", equipeB: "Os Mata Pato", placar: "" },
+    { equipeA: "PNS E.C", equipeB: "Os Mafioso", placar: "" },
+    { equipeA: "Leicester PVA", equipeB: "Os Mata Pato", placar: "" },
+    { equipeA: "Leicester PVA", equipeB: "Os Mafioso", placar: "" },
+
+    // Grupo B (3 jogos)
+    { equipeA: "União PVA", equipeB: "APEC", placar: "" },
+    { equipeA: "União PVA", equipeB: "Primaverense", placar: "" },
+    { equipeA: "APEC", equipeB: "Primaverense", placar: "" },
+
+    // Semifinais
+    { equipeA: "1º Grupo A", equipeB: "2º Grupo B", placar: "" },
+    { equipeA: "1º Grupo B", equipeB: "2º Grupo A", placar: "" },
+
+    // Final
+    { equipeA: "Vencedor Semi 1", equipeB: "Vencedor Semi 2", placar: "" }
+  ]
+},
+
+"sub19-m": {
+  equipes: [
+    { nome: "União PVA", logo: "photos/uniao.png" },
+    { nome: "Os Mata Pato", logo: "photos/matapato.png" },
+    { nome: "Leicester PVA", logo: "photos/leicester.png" }
+  ],
+
+  classificacao: [
+    { equipe: "União PVA", v: 0, e: 0, d: 0 },
+    { equipe: "Os Mata Pato", v: 0, e: 0, d: 0 },
+    { equipe: "Leicester PVA", v: 0, e: 0, d: 0 }
+  ],
+
+  artilharia: [
+    { jogador: "", equipe: "", gols: 0 },
+    { jogador: "", equipe: "", gols: 0 },
+    { jogador: "", equipe: "", gols: 0 }
+  ],
+
+  jogos: [
+    // Primeiro Turno
+    { equipeA: "União PVA", equipeB: "Os Mata Pato", placar: "" },
+    { equipeA: "União PVA", equipeB: "Leicester PVA", placar: "" },
+    { equipeA: "Os Mata Pato", equipeB: "Leicester PVA", placar: "" },
+
+    // Segundo Turno (returno)
+    { equipeA: "Os Mata Pato", equipeB: "União PVA", placar: "" },
+    { equipeA: "Leicester PVA", equipeB: "União PVA", placar: "" },
+    { equipeA: "Leicester PVA", equipeB: "Os Mata Pato", placar: "" }
+  ]
+},
+// ...existing code...
+
+
 };
 
 const seletor = document.getElementById("categoria");
@@ -174,7 +265,7 @@ function atualizarTabelas(categoria) {
       listaEquipes.appendChild(item);
     });
   } else if (dados.equipes) {
-    // Sub-13: lista única das 4 equipes
+    // Sub-13 / Sub-19: lista única das equipes
     dados.equipes.forEach((equipe) => {
       const item = document.createElement("li");
       item.innerHTML = `<img src="${equipe.logo}" alt="${equipe.nome}" class="logo-time"> ${equipe.nome}`;
@@ -185,12 +276,26 @@ function atualizarTabelas(categoria) {
   // --- Classificação ---
   if (dados.classificacao && dados.classificacao.A && dados.classificacao.B) {
     // Sub-11: por grupos
-    montarClassificacao(dados.classificacao.A, tabelaClassificacao, "Classificação - Grupo A");
-    montarClassificacao(dados.classificacao.B, tabelaClassificacao, "Classificação - Grupo B");
+    montarClassificacao(dados.classificacao.A, tabelaClassificacao, "Classificação - Grupo A", categoria);
+    montarClassificacao(dados.classificacao.B, tabelaClassificacao, "Classificação - Grupo B", categoria);
   } else if (dados.classificacao) {
-    // Sub-13: geral única
-    montarClassificacao(dados.classificacao, tabelaClassificacao, "Classificação - Geral");
+    // Sub-13 / Sub-19: geral única
+    montarClassificacao(dados.classificacao, tabelaClassificacao, "Classificação - Geral", categoria);
   }
+
+  // --- Legenda única (com quadradinho) ---
+  // Remove qualquer legenda antiga no container (evita duplicações)
+  tabelaClassificacao.querySelectorAll(".legenda").forEach(el => el.remove());
+
+  const legenda = document.createElement("div");
+  legenda.className = "legenda";
+
+  if (categoria === "sub19-m") {
+    legenda.innerHTML = `<span class="selecionado"></span> Campeão <small>(apenas o 1º lugar será campeão)</small>`;
+  } else {
+    legenda.innerHTML = `<span class="selecionado"></span> Classificados`;
+  }
+  tabelaClassificacao.appendChild(legenda);
 
   // --- Artilharia ---
   if (dados.artilharia && Array.isArray(dados.artilharia)) {
@@ -205,7 +310,6 @@ function atualizarTabelas(categoria) {
     });
   }
 
-// ...existing code...
   // --- Jogos ---
   if (dados.grupos) {
     // Classifica os jogos em grupos / semifinais / final mantendo a ordem original
@@ -261,11 +365,10 @@ function atualizarTabelas(categoria) {
     blocoJogos.appendChild(tituloFinal);
     dados.jogos.slice(6, 7).forEach((jogo, i) => renderizarJogo(jogo, i + 6, categoria));
   }
-// ...existing code...
 }
 
 // --- Classificação com título e cabeçalho ---
-function montarClassificacao(grupoOuLista, container, titulo) {
+function montarClassificacao(grupoOuLista, container, titulo, categoria) {
   const tituloEl = document.createElement("h3");
   tituloEl.textContent = titulo;
   container.appendChild(tituloEl);
@@ -306,6 +409,10 @@ function montarClassificacao(grupoOuLista, container, titulo) {
       <td>${time.d}</td>
       <td>${time.pontos}</td>
     `;
+    // Sub19: marca apenas o 1º colocado
+    if (categoria === "sub19-m" && index === 0) {
+      linha.classList.add("selecionado");
+    }
     tbody.appendChild(linha);
   });
 
@@ -342,7 +449,7 @@ function renderizarJogo(jogo, i, categoria) {
 function buscarLogo(gruposOuEquipes, nome) {
   let lista;
   if (Array.isArray(gruposOuEquipes)) {
-    // Sub-13: lista simples
+    // Sub-13 / Sub-19: lista simples
     lista = gruposOuEquipes;
   } else {
     // Sub-11: objeto com A e B
