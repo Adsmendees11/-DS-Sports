@@ -81,6 +81,7 @@ th {
   margin-top: 12px;
   font-size: 14px;
   color: #333;
+  text-align: center;
 }
 
 .legenda .quadrado {
@@ -122,6 +123,14 @@ th {
   flex-wrap: nowrap;
 }
 
+.duelo .resultado {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  min-width: 80px;   /* garante alinhamento central */
+}
+
 .duelo img.logo-time {
   width: 40px;
   height: 40px;
@@ -137,12 +146,17 @@ th {
 
 .duelo .meio {
   display: flex;
-  flex-direction: column;   /* X em cima, placar embaixo */
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 4px;
-  min-width: 50px;
+  width: 80px;        /* largura fixa para centralizar */
+  flex-shrink: 0;     /* impede encolher */
+}
+
+.duelo .x {
+  font-size: 1.0rem;
+  font-weight: bold;
+  color: #333;
 }
 
 .duelo .versus {
@@ -166,22 +180,6 @@ th {
   font-size: 15px;
 }
 
-.btn-resultado {
-  display: block;
-  margin: 0 auto;
-  padding: 8px 16px;
-  background: linear-gradient(to top, #220013, #640032, #8a0045);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.btn-resultado:hover {
-  background: #640032;
-}
-
 footer {
   background: linear-gradient(to top, #220013, #640032, #8a0045);
   color: white;
@@ -201,12 +199,6 @@ footer {
     flex-wrap: nowrap;     /* não quebra linha */
     gap: 4px;              /* menos espaço entre itens */
     font-size: 0.75rem;    /* texto menor */
-  }
-
-  .btn-resultado {
-    width: auto;           /* não ocupa 100%, fica proporcional */
-    padding: 4px 8px;      /* botão mais compacto */
-    font-size: 0.75rem;
   }
 
   table {
