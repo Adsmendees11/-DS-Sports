@@ -3,52 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Corinthians empata contra o Internacional</title>
+  <title>Real Madrid bate Barcelona no El Clássico</title>
   <link rel="stylesheet" href="noticias.css">
   <!-- Metatags Open Graph para pré-visualização -->
-<meta property="og:title" content="Real Madrid bate Barcelona no El Clássico" />
-<meta property="og:description" content="Vinicius Jr se revolta após substituição em Real Madrid x Barcelona…" />
-<meta property="og:image" content="https://adsmendees11.github.io/-DS-Sports/photos/realmadrid-barcelona.jpg" />
-<meta property="og:url" content="https://adsmendees11.github.io/-DS-Sports/noticia-viniciusjr.html" />
-<meta property="og:type" content="article" />
-<meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Real Madrid bate Barcelona no El Clássico" />
+  <meta property="og:description" content="Vinicius Jr se revolta após substituição em Real Madrid x Barcelona…" />
+  <meta property="og:image" content="https://adsmendees11.github.io/-DS-Sports/photos/realmadrid-barcelona.jpg" />
+  <meta property="og:url" content="https://adsmendees11.github.io/-DS-Sports/noticia-viniciusjr.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="pt_BR" />
 </head>
 <body>
 
   <main>
     <article class="noticia-completa">
-  <h2>Real Madrid bate Barcelona no El Clássico</h2>
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/X6dRtWPwlw8"
-      title="YouTube Shorts player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-  </div>
-  <p>Durante a partida, o atacante brasileiro vinha participando ativamente do jogo, mas foi substituído ainda no segundo tempo, o que gerou reação imediata e visível de frustração por parte de Vinicius Jr. Ele deixou o campo aparentemente irritado e demonstrou insatisfação com a decisão da comissão técnica.
-Após o jogo, a situação repercutiu na imprensa esportiva, com destaque para o comportamento do jogador e comentários sobre sua relação com o técnico e a intensidade de sua competitividade. O episódio também reacendeu debates sobre a gestão de substituições em grandes clássicos, especialmente com atletas de destaque e alta performance como Vinicius.</p>
-  <span class="data">26/10/2025</span>
-</article>
+      <h2>Real Madrid bate Barcelona no El Clássico</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/X6dRtWPwlw8"
+          title="Vídeo Real Madrid x Barcelona" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <p>Durante a partida, o atacante brasileiro vinha participando ativamente do jogo, mas foi substituído ainda no segundo tempo, o que gerou reação imediata e visível de frustração por parte de Vinicius Jr. Ele deixou o campo aparentemente irritado e demonstrou insatisfação com a decisão da comissão técnica.
+      Após o jogo, a situação repercutiu na imprensa esportiva, com destaque para o comportamento do jogador e comentários sobre sua relação com o técnico e a intensidade de sua competitividade. O episódio também reacendeu debates sobre a gestão de substituições em grandes clássicos, especialmente com atletas de destaque e alta performance como Vinicius.</p>
+      <span class="data">26/10/2025</span>
+    </article>
+
     <!-- Botões lado a lado -->
     <div class="botoes-acoes">
-      <a href="index.html" class="botao-seta">↻</a>
-      <button class="botao-compartilhar" onclick="compartilharPagina()"><svg viewBox="0 0 24 24" width="24" height="24" fill="white">
-  <path d="M14 9V5l7 7-7 7v-4c-6 0-10 2-12 6 1-6 5-10 12-10z"/>
-</svg></button>
+      <a href="index.html" class="botao-seta" aria-label="Voltar para página inicial">↻</a>
+      <button class="botao-compartilhar" onclick="compartilharPagina()" aria-label="Compartilhar notícia">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+          <path d="M14 9V5l7 7-7 7v-4c-6 0-10 2-12 6 1-6 5-10 12-10z"/>
+        </svg>
+      </button>
     </div>
   </main>
 
   <script>
-   function compartilharPagina() {
-  const urlAtual = window.location.href;
+    function compartilharPagina() {
+      const urlAtual = window.location.href;
 
-  if (navigator.share) {
-    navigator.share({
-      url: urlAtual
-    }).catch((error) => console.error("Erro ao compartilhar:", error));
-  } else {
-    alert("Compartilhamento não suportado neste navegador.");
-  }
-}
+      if (navigator.share) {
+        navigator.share({
+          url: urlAtual
+        }).catch((error) => console.error("Erro ao compartilhar:", error));
+      } else {
+        alert("Compartilhamento não suportado neste navegador.");
+      }
+    }
   </script>
 </body>
 </html>

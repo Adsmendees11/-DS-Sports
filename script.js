@@ -1,4 +1,12 @@
 const noticias = [
+   {
+    titulo: "Filipe Luís vai permanecer no comando do Flamengo?",
+    imagem: "photos/filipeluis.jpg",
+    texto: "O técnico do Flamengo chega no final da temporada com um marco incrível...",
+    data: "26/12/2025",
+    categoria: "brasileiros",
+    link: "noticia-filipe.html"
+  },
   {
     titulo: "Juventude tenta abandonar o campo após gol do Fluminense no Maracanã",
     imagem: "photos/fluminense-juventude.jpeg",
